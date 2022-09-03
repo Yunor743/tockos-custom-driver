@@ -1,0 +1,16 @@
+using "platforms/boards/stm32f4_discovery.repl"
+using "platforms/boards/stm32f4_discovery-bb.repl"
+
+externalButton: Miscellaneous.Button @ gpioPortA
+    -> gpioPortA@3
+
+led0: Miscellaneous.LED @ gpioPortE
+led1: Miscellaneous.LED @ gpioPortE
+led2: Miscellaneous.LED @ gpioPortE
+led3: Miscellaneous.LED @ gpioPortE
+
+gpioPortE:
+    0 -> led0@0
+    1 -> led1@0
+    2 -> led2@0
+    3 -> led3@0
